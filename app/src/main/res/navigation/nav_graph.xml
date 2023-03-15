@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/LoginFragment" >
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.test.mvptest.view.LoginFragment"
+        android:label="LoginFragment"
+        android:theme = "@style/Theme.Design.NoActionBar"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_home"
+            app:destination = "@id/HomeFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.test.mvptest.view.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home"
+        >
+    </fragment>
+
+    <fragment
+        android:id="@+id/ProfileFragment"
+        android:name="com.test.mvptest.view.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile"/>
+    <fragment
+        android:id="@+id/SettingFragment"
+        android:name="com.test.mvptest.view.SettingsFragment"
+        android:label="SettingFragment"/>
+
+
+</navigation>
